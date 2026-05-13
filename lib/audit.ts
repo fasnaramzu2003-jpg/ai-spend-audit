@@ -26,7 +26,7 @@ export function runAudit(input: AuditInput): AuditResult {
       if (tool.plan === 'business' && tool.seats <= 2) {
         saving = (PRICING.cursor.business - PRICING.cursor.pro) * tool.seats
         action = 'Downgrade to Cursor Pro'
-        reason = With ${tool.seats} seats, Pro plan saves $${saving}/mo vs Business.
+        reason = "Cursor Pro is cheaper for small teams. "
       }
     }
 
@@ -44,7 +44,7 @@ export function runAudit(input: AuditInput): AuditResult {
       if (tool.plan === 'team' && tool.seats <= 2) {
         saving = currentSpend - (PRICING.chatgpt.plus * tool.seats)
         action = 'Switch to Plus individual plans'
-        reason = ${tool.seats} users on Plus costs less than Team plan.
+        reason = `${tool.seats} users on Plus costs less than Team plan.`
       }
     }
 
