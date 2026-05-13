@@ -1,5 +1,5 @@
 import { describe, it, expect } from 'vitest'
-import { runAudit } from '../lib/audit'
+import { runAudit } from '../../../lib/audit'
 
 describe('Audit Engine', () => {
 
